@@ -101,5 +101,11 @@ namespace CV_lab_1
             IFilter filter = new GrayScaleFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Sepia(10);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
