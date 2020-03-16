@@ -31,15 +31,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.точечныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.инверсияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gaussianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,13 @@
             this.файлToolStripMenuItem.Text = "Open file";
             this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
             // 
+            // saveImageToolStripMenuItem
+            // 
+            this.saveImageToolStripMenuItem.Name = "saveImageToolStripMenuItem";
+            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.saveImageToolStripMenuItem.Text = "Save Image";
+            this.saveImageToolStripMenuItem.Click += new System.EventHandler(this.saveImageToolStripMenuItem_Click);
+            // 
             // фильтрыToolStripMenuItem
             // 
             this.фильтрыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -86,7 +94,7 @@
             this.точечныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.инверсияToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
-            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.точечныеToolStripMenuItem.Text = "By point";
             // 
             // инверсияToolStripMenuItem
@@ -95,6 +103,22 @@
             this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.инверсияToolStripMenuItem.Text = "Inverse";
             this.инверсияToolStripMenuItem.Click += new System.EventHandler(this.инверсияToolStripMenuItem_Click);
+            // 
+            // matrixToolStripMenuItem
+            // 
+            this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.blurToolStripMenuItem,
+            this.gaussianFilterToolStripMenuItem});
+            this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
+            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.matrixToolStripMenuItem.Text = "Matrix";
+            // 
+            // blurToolStripMenuItem
+            // 
+            this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
+            this.blurToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.blurToolStripMenuItem.Text = "Blur";
+            this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
@@ -121,27 +145,12 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // matrixToolStripMenuItem
+            // gaussianFilterToolStripMenuItem
             // 
-            this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.blurToolStripMenuItem});
-            this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.matrixToolStripMenuItem.Text = "Matrix";
-            // 
-            // blurToolStripMenuItem
-            // 
-            this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
-            this.blurToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.blurToolStripMenuItem.Text = "Blur";
-            this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
-            // 
-            // saveImageToolStripMenuItem
-            // 
-            this.saveImageToolStripMenuItem.Name = "saveImageToolStripMenuItem";
-            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.saveImageToolStripMenuItem.Text = "Save Image";
-            this.saveImageToolStripMenuItem.Click += new System.EventHandler(this.saveImageToolStripMenuItem_Click);
+            this.gaussianFilterToolStripMenuItem.Name = "gaussianFilterToolStripMenuItem";
+            this.gaussianFilterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gaussianFilterToolStripMenuItem.Text = "GaussianFilter";
+            this.gaussianFilterToolStripMenuItem.Click += new System.EventHandler(this.gaussianFilterToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -178,6 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gaussianFilterToolStripMenuItem;
     }
 }
 

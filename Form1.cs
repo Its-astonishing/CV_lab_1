@@ -90,5 +90,11 @@ namespace CV_lab_1
             }
 
         }
+
+        private void gaussianFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new GaussianFilter(3, 2);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
