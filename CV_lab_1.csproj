@@ -58,6 +58,7 @@
     <Compile Include="IncreaseSharpness.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="MatrixFilter.cs" />
+    <Compile Include="NormalizeBrightness.cs" />
     <Compile Include="PrewittFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

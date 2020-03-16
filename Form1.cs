@@ -160,5 +160,11 @@ namespace CV_lab_1
             IFilter filter = new PrewittFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void normalizeBrightnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new NormalizeBrightness();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

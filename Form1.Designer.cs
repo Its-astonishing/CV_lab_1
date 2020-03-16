@@ -45,11 +45,12 @@
             this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tisnenisFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scharrFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prewittFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.scharrFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prewittFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalizeBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +113,8 @@
             this.инверсияToolStripMenuItem,
             this.grayScaleToolStripMenuItem,
             this.sepiaToolStripMenuItem,
-            this.increaseBrightnessToolStripMenuItem});
+            this.increaseBrightnessToolStripMenuItem,
+            this.normalizeBrightnessToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
             this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.точечныеToolStripMenuItem.Text = "By point";
@@ -120,28 +122,28 @@
             // инверсияToolStripMenuItem
             // 
             this.инверсияToolStripMenuItem.Name = "инверсияToolStripMenuItem";
-            this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.инверсияToolStripMenuItem.Text = "Inverse";
             this.инверсияToolStripMenuItem.Click += new System.EventHandler(this.инверсияToolStripMenuItem_Click);
             // 
             // grayScaleToolStripMenuItem
             // 
             this.grayScaleToolStripMenuItem.Name = "grayScaleToolStripMenuItem";
-            this.grayScaleToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.grayScaleToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.grayScaleToolStripMenuItem.Text = "Gray scale";
             this.grayScaleToolStripMenuItem.Click += new System.EventHandler(this.grayScaleToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
             // increaseBrightnessToolStripMenuItem
             // 
             this.increaseBrightnessToolStripMenuItem.Name = "increaseBrightnessToolStripMenuItem";
-            this.increaseBrightnessToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.increaseBrightnessToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.increaseBrightnessToolStripMenuItem.Text = "Increase brightness";
             this.increaseBrightnessToolStripMenuItem.Click += new System.EventHandler(this.increaseBrightnessToolStripMenuItem_Click);
             // 
@@ -194,6 +196,20 @@
             this.tisnenisFilterToolStripMenuItem.Text = "Tisnenie Filter";
             this.tisnenisFilterToolStripMenuItem.Click += new System.EventHandler(this.tisnenisFilterToolStripMenuItem_Click);
             // 
+            // scharrFilterToolStripMenuItem
+            // 
+            this.scharrFilterToolStripMenuItem.Name = "scharrFilterToolStripMenuItem";
+            this.scharrFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.scharrFilterToolStripMenuItem.Text = "Scharr Filter";
+            this.scharrFilterToolStripMenuItem.Click += new System.EventHandler(this.scharrFilterToolStripMenuItem_Click);
+            // 
+            // prewittFilterToolStripMenuItem
+            // 
+            this.prewittFilterToolStripMenuItem.Name = "prewittFilterToolStripMenuItem";
+            this.prewittFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.prewittFilterToolStripMenuItem.Text = "Prewitt Filter";
+            this.prewittFilterToolStripMenuItem.Click += new System.EventHandler(this.prewittFilterToolStripMenuItem_Click);
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(0, 706);
@@ -219,19 +235,12 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // scharrFilterToolStripMenuItem
+            // normalizeBrightnessToolStripMenuItem
             // 
-            this.scharrFilterToolStripMenuItem.Name = "scharrFilterToolStripMenuItem";
-            this.scharrFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.scharrFilterToolStripMenuItem.Text = "Scharr Filter";
-            this.scharrFilterToolStripMenuItem.Click += new System.EventHandler(this.scharrFilterToolStripMenuItem_Click);
-            // 
-            // prewittFilterToolStripMenuItem
-            // 
-            this.prewittFilterToolStripMenuItem.Name = "prewittFilterToolStripMenuItem";
-            this.prewittFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.prewittFilterToolStripMenuItem.Text = "Prewitt Filter";
-            this.prewittFilterToolStripMenuItem.Click += new System.EventHandler(this.prewittFilterToolStripMenuItem_Click);
+            this.normalizeBrightnessToolStripMenuItem.Name = "normalizeBrightnessToolStripMenuItem";
+            this.normalizeBrightnessToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.normalizeBrightnessToolStripMenuItem.Text = "Normalize brightness";
+            this.normalizeBrightnessToolStripMenuItem.Click += new System.EventHandler(this.normalizeBrightnessToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -278,6 +287,7 @@
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scharrFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prewittFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem normalizeBrightnessToolStripMenuItem;
     }
 }
 
