@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +129,8 @@
             // 
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blurToolStripMenuItem,
-            this.gaussianFilterToolStripMenuItem});
+            this.gaussianFilterToolStripMenuItem,
+            this.increaseSharpnessToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -143,8 +145,8 @@
             // gaussianFilterToolStripMenuItem
             // 
             this.gaussianFilterToolStripMenuItem.Name = "gaussianFilterToolStripMenuItem";
-            this.gaussianFilterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.gaussianFilterToolStripMenuItem.Text = "GaussianFilter";
+            this.gaussianFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.gaussianFilterToolStripMenuItem.Text = "Gaussian Filter";
             this.gaussianFilterToolStripMenuItem.Click += new System.EventHandler(this.gaussianFilterToolStripMenuItem_Click);
             // 
             // progressBar1
@@ -178,6 +180,13 @@
             this.increaseBrightnessToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.increaseBrightnessToolStripMenuItem.Text = "Increase brightness";
             this.increaseBrightnessToolStripMenuItem.Click += new System.EventHandler(this.increaseBrightnessToolStripMenuItem_Click);
+            // 
+            // increaseSharpnessToolStripMenuItem
+            // 
+            this.increaseSharpnessToolStripMenuItem.Name = "increaseSharpnessToolStripMenuItem";
+            this.increaseSharpnessToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.increaseSharpnessToolStripMenuItem.Text = "Increase Sharpness";
+            this.increaseSharpnessToolStripMenuItem.Click += new System.EventHandler(this.increaseSharpnessToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -218,6 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem grayScaleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem increaseBrightnessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem increaseSharpnessToolStripMenuItem;
     }
 }
 

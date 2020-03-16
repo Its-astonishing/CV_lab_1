@@ -113,5 +113,11 @@ namespace CV_lab_1
             IFilter filter = new BrightnessFilter(50);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void increaseSharpnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new IncreaseSharpness();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
