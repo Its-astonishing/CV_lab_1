@@ -58,8 +58,10 @@
     <Compile Include="IncreaseSharpness.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="MatrixFilter.cs" />
+    <Compile Include="PrewittFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScharrFilter.cs" />
     <Compile Include="Sepia.cs" />
     <Compile Include="SobelFilter.cs" />
     <Compile Include="TisnenieFilter.cs" />

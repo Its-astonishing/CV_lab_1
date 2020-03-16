@@ -148,5 +148,17 @@ namespace CV_lab_1
             IFilter filter = new TisnenieFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void scharrFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new ScharrFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void prewittFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new PrewittFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

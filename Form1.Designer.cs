@@ -32,22 +32,24 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.точечныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.инверсияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grayScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gaussianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tisnenisFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.scharrFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prewittFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +89,13 @@
             this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.saveImageToolStripMenuItem.Text = "Save Image";
             this.saveImageToolStripMenuItem.Click += new System.EventHandler(this.saveImageToolStripMenuItem_Click);
+            // 
+            // undoToolStripMenuItem
+            // 
+            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // фильтрыToolStripMenuItem
             // 
@@ -129,6 +138,13 @@
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
+            // increaseBrightnessToolStripMenuItem
+            // 
+            this.increaseBrightnessToolStripMenuItem.Name = "increaseBrightnessToolStripMenuItem";
+            this.increaseBrightnessToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.increaseBrightnessToolStripMenuItem.Text = "Increase brightness";
+            this.increaseBrightnessToolStripMenuItem.Click += new System.EventHandler(this.increaseBrightnessToolStripMenuItem_Click);
+            // 
             // matrixToolStripMenuItem
             // 
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -136,7 +152,9 @@
             this.gaussianFilterToolStripMenuItem,
             this.increaseSharpnessToolStripMenuItem,
             this.sobelFilterToolStripMenuItem,
-            this.tisnenisFilterToolStripMenuItem});
+            this.tisnenisFilterToolStripMenuItem,
+            this.scharrFilterToolStripMenuItem,
+            this.prewittFilterToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -154,6 +172,27 @@
             this.gaussianFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.gaussianFilterToolStripMenuItem.Text = "Gaussian Filter";
             this.gaussianFilterToolStripMenuItem.Click += new System.EventHandler(this.gaussianFilterToolStripMenuItem_Click);
+            // 
+            // increaseSharpnessToolStripMenuItem
+            // 
+            this.increaseSharpnessToolStripMenuItem.Name = "increaseSharpnessToolStripMenuItem";
+            this.increaseSharpnessToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.increaseSharpnessToolStripMenuItem.Text = "Increase Sharpness";
+            this.increaseSharpnessToolStripMenuItem.Click += new System.EventHandler(this.increaseSharpnessToolStripMenuItem_Click);
+            // 
+            // sobelFilterToolStripMenuItem
+            // 
+            this.sobelFilterToolStripMenuItem.Name = "sobelFilterToolStripMenuItem";
+            this.sobelFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.sobelFilterToolStripMenuItem.Text = "Sobel Filter";
+            this.sobelFilterToolStripMenuItem.Click += new System.EventHandler(this.sobelFilterToolStripMenuItem_Click);
+            // 
+            // tisnenisFilterToolStripMenuItem
+            // 
+            this.tisnenisFilterToolStripMenuItem.Name = "tisnenisFilterToolStripMenuItem";
+            this.tisnenisFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.tisnenisFilterToolStripMenuItem.Text = "Tisnenie Filter";
+            this.tisnenisFilterToolStripMenuItem.Click += new System.EventHandler(this.tisnenisFilterToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
@@ -180,40 +219,19 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // increaseBrightnessToolStripMenuItem
+            // scharrFilterToolStripMenuItem
             // 
-            this.increaseBrightnessToolStripMenuItem.Name = "increaseBrightnessToolStripMenuItem";
-            this.increaseBrightnessToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.increaseBrightnessToolStripMenuItem.Text = "Increase brightness";
-            this.increaseBrightnessToolStripMenuItem.Click += new System.EventHandler(this.increaseBrightnessToolStripMenuItem_Click);
+            this.scharrFilterToolStripMenuItem.Name = "scharrFilterToolStripMenuItem";
+            this.scharrFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.scharrFilterToolStripMenuItem.Text = "Scharr Filter";
+            this.scharrFilterToolStripMenuItem.Click += new System.EventHandler(this.scharrFilterToolStripMenuItem_Click);
             // 
-            // increaseSharpnessToolStripMenuItem
+            // prewittFilterToolStripMenuItem
             // 
-            this.increaseSharpnessToolStripMenuItem.Name = "increaseSharpnessToolStripMenuItem";
-            this.increaseSharpnessToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.increaseSharpnessToolStripMenuItem.Text = "Increase Sharpness";
-            this.increaseSharpnessToolStripMenuItem.Click += new System.EventHandler(this.increaseSharpnessToolStripMenuItem_Click);
-            // 
-            // sobelFilterToolStripMenuItem
-            // 
-            this.sobelFilterToolStripMenuItem.Name = "sobelFilterToolStripMenuItem";
-            this.sobelFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.sobelFilterToolStripMenuItem.Text = "Sobel Filter";
-            this.sobelFilterToolStripMenuItem.Click += new System.EventHandler(this.sobelFilterToolStripMenuItem_Click);
-            // 
-            // tisnenisFilterToolStripMenuItem
-            // 
-            this.tisnenisFilterToolStripMenuItem.Name = "tisnenisFilterToolStripMenuItem";
-            this.tisnenisFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.tisnenisFilterToolStripMenuItem.Text = "Tisnenie Filter";
-            this.tisnenisFilterToolStripMenuItem.Click += new System.EventHandler(this.tisnenisFilterToolStripMenuItem_Click);
-            // 
-            // undoToolStripMenuItem
-            // 
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.undoToolStripMenuItem.Text = "Undo";
-            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            this.prewittFilterToolStripMenuItem.Name = "prewittFilterToolStripMenuItem";
+            this.prewittFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.prewittFilterToolStripMenuItem.Text = "Prewitt Filter";
+            this.prewittFilterToolStripMenuItem.Click += new System.EventHandler(this.prewittFilterToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -258,6 +276,8 @@
         private System.Windows.Forms.ToolStripMenuItem sobelFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tisnenisFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scharrFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prewittFilterToolStripMenuItem;
     }
 }
 
