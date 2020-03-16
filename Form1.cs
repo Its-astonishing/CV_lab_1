@@ -125,5 +125,11 @@ namespace CV_lab_1
             IFilter filter = new SobelFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void tisnenisFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new TisnenieFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

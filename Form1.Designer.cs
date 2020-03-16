@@ -46,6 +46,7 @@
             this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tisnenisFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +133,8 @@
             this.blurToolStripMenuItem,
             this.gaussianFilterToolStripMenuItem,
             this.increaseSharpnessToolStripMenuItem,
-            this.sobelFilterToolStripMenuItem});
+            this.sobelFilterToolStripMenuItem,
+            this.tisnenisFilterToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -140,8 +142,8 @@
             // blurToolStripMenuItem
             // 
             this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
-            this.blurToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.blurToolStripMenuItem.Text = "Blur";
+            this.blurToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.blurToolStripMenuItem.Text = "Blur Filter";
             this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
             // 
             // gaussianFilterToolStripMenuItem
@@ -197,6 +199,13 @@
             this.sobelFilterToolStripMenuItem.Text = "Sobel Filter";
             this.sobelFilterToolStripMenuItem.Click += new System.EventHandler(this.sobelFilterToolStripMenuItem_Click);
             // 
+            // tisnenisFilterToolStripMenuItem
+            // 
+            this.tisnenisFilterToolStripMenuItem.Name = "tisnenisFilterToolStripMenuItem";
+            this.tisnenisFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.tisnenisFilterToolStripMenuItem.Text = "Tisnenie Filter";
+            this.tisnenisFilterToolStripMenuItem.Click += new System.EventHandler(this.tisnenisFilterToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +247,7 @@
         private System.Windows.Forms.ToolStripMenuItem increaseBrightnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem increaseSharpnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobelFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tisnenisFilterToolStripMenuItem;
     }
 }
 
