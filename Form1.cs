@@ -166,5 +166,17 @@ namespace CV_lab_1
             IFilter filter = new NormalizeBrightness();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void dilationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Dilation();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Erosion();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

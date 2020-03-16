@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="BlurFilter.cs" />
     <Compile Include="BrightnessFilter.cs" />
+    <Compile Include="Dilation.cs" />
+    <Compile Include="Erosion.cs" />
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="GrayScaleFilter.cs" />
     <Compile Include="IFilter.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IMorphology.cs" />
     <Compile Include="IncreaseSharpness.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="MatrixFilter.cs" />
