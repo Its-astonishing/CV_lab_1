@@ -88,12 +88,17 @@ namespace CV_lab_1
             {
                 pictureBox1.Image.Save(dialog.FileName + ".jpeg", ImageFormat.Jpeg);
             }
-
         }
 
         private void gaussianFilterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             IFilter filter = new GaussianFilter(3, 2);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void grayScaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new GrayScaleFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }
