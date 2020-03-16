@@ -107,5 +107,11 @@ namespace CV_lab_1
             IFilter filter = new Sepia(10);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void increaseBrightnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new BrightnessFilter(50);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
