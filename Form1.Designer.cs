@@ -45,6 +45,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobelFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +131,8 @@
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blurToolStripMenuItem,
             this.gaussianFilterToolStripMenuItem,
-            this.increaseSharpnessToolStripMenuItem});
+            this.increaseSharpnessToolStripMenuItem,
+            this.sobelFilterToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -188,6 +190,13 @@
             this.increaseSharpnessToolStripMenuItem.Text = "Increase Sharpness";
             this.increaseSharpnessToolStripMenuItem.Click += new System.EventHandler(this.increaseSharpnessToolStripMenuItem_Click);
             // 
+            // sobelFilterToolStripMenuItem
+            // 
+            this.sobelFilterToolStripMenuItem.Name = "sobelFilterToolStripMenuItem";
+            this.sobelFilterToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.sobelFilterToolStripMenuItem.Text = "Sobel Filter";
+            this.sobelFilterToolStripMenuItem.Click += new System.EventHandler(this.sobelFilterToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem increaseBrightnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem increaseSharpnessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobelFilterToolStripMenuItem;
     }
 }
 
