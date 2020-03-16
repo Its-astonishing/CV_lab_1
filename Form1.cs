@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace CV_lab_1
     {
         Bitmap m_image;
 
+        Stack imageHistory = new Stack();
+ 
         public Form1()
         {
             InitializeComponent();
@@ -32,6 +35,8 @@ namespace CV_lab_1
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 m_image = new Bitmap(dialog.FileName);
+                imageHistory.Clear();
+                imageHistory.Push(m_image);
             }
 
             pictureBox1.Image = m_image;
@@ -66,6 +71,7 @@ namespace CV_lab_1
 
             if (backgroundWorker1.CancellationPending != true)
             {
+                imageHistory.Push(m_image);
                 m_image = newImage;
             }
         }
@@ -124,6 +130,17 @@ namespace CV_lab_1
         {
             IFilter filter = new SobelFilter();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(imageHistory.Count > 0)
+            {
+                Bitmap img = (Bitmap)imageHistory.Pop();
+                m_image = img;
+                pictureBox1.Image = m_image;
+                pictureBox1.Refresh();
+            }
         }
 
         private void tisnenisFilterToolStripMenuItem_Click(object sender, EventArgs e)

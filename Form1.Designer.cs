@@ -47,6 +47,7 @@
             this.increaseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tisnenisFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.saveImageToolStripMenuItem,
+            this.undoToolStripMenuItem,
             this.фильтрыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -206,6 +208,13 @@
             this.tisnenisFilterToolStripMenuItem.Text = "Tisnenie Filter";
             this.tisnenisFilterToolStripMenuItem.Click += new System.EventHandler(this.tisnenisFilterToolStripMenuItem_Click);
             // 
+            // undoToolStripMenuItem
+            // 
+            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +257,7 @@
         private System.Windows.Forms.ToolStripMenuItem increaseSharpnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobelFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tisnenisFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
     }
 }
 
