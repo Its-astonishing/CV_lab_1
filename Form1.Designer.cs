@@ -39,6 +39,8 @@
             this.grayScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.increaseBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalizeBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gaussianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,13 +49,18 @@
             this.tisnenisFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scharrFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prewittFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.normalizeBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.morphologyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dilationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erosionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.geometricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wavesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.waves2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +113,8 @@
             this.фильтрыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.точечныеToolStripMenuItem,
             this.matrixToolStripMenuItem,
-            this.morphologyToolStripMenuItem});
+            this.morphologyToolStripMenuItem,
+            this.geometricToolStripMenuItem});
             this.фильтрыToolStripMenuItem.Name = "фильтрыToolStripMenuItem";
             this.фильтрыToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.фильтрыToolStripMenuItem.Text = "Filter";
@@ -118,9 +126,10 @@
             this.grayScaleToolStripMenuItem,
             this.sepiaToolStripMenuItem,
             this.increaseBrightnessToolStripMenuItem,
-            this.normalizeBrightnessToolStripMenuItem});
+            this.normalizeBrightnessToolStripMenuItem,
+            this.medianFilterToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
-            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.точечныеToolStripMenuItem.Text = "By point";
             // 
             // инверсияToolStripMenuItem
@@ -151,6 +160,20 @@
             this.increaseBrightnessToolStripMenuItem.Text = "Increase brightness";
             this.increaseBrightnessToolStripMenuItem.Click += new System.EventHandler(this.increaseBrightnessToolStripMenuItem_Click);
             // 
+            // normalizeBrightnessToolStripMenuItem
+            // 
+            this.normalizeBrightnessToolStripMenuItem.Name = "normalizeBrightnessToolStripMenuItem";
+            this.normalizeBrightnessToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.normalizeBrightnessToolStripMenuItem.Text = "Normalize brightness";
+            this.normalizeBrightnessToolStripMenuItem.Click += new System.EventHandler(this.normalizeBrightnessToolStripMenuItem_Click);
+            // 
+            // medianFilterToolStripMenuItem
+            // 
+            this.medianFilterToolStripMenuItem.Name = "medianFilterToolStripMenuItem";
+            this.medianFilterToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.medianFilterToolStripMenuItem.Text = "Median filter";
+            this.medianFilterToolStripMenuItem.Click += new System.EventHandler(this.medianFilterToolStripMenuItem_Click);
+            // 
             // matrixToolStripMenuItem
             // 
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -162,7 +185,7 @@
             this.scharrFilterToolStripMenuItem,
             this.prewittFilterToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
             // 
             // blurToolStripMenuItem
@@ -214,6 +237,53 @@
             this.prewittFilterToolStripMenuItem.Text = "Prewitt Filter";
             this.prewittFilterToolStripMenuItem.Click += new System.EventHandler(this.prewittFilterToolStripMenuItem_Click);
             // 
+            // morphologyToolStripMenuItem
+            // 
+            this.morphologyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dilationToolStripMenuItem,
+            this.erosionToolStripMenuItem,
+            this.openingToolStripMenuItem,
+            this.closingToolStripMenuItem,
+            this.gradientToolStripMenuItem});
+            this.morphologyToolStripMenuItem.Name = "morphologyToolStripMenuItem";
+            this.morphologyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.morphologyToolStripMenuItem.Text = "Morphology";
+            // 
+            // dilationToolStripMenuItem
+            // 
+            this.dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
+            this.dilationToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.dilationToolStripMenuItem.Text = "Dilation";
+            this.dilationToolStripMenuItem.Click += new System.EventHandler(this.dilationToolStripMenuItem_Click);
+            // 
+            // erosionToolStripMenuItem
+            // 
+            this.erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
+            this.erosionToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.erosionToolStripMenuItem.Text = "Erosion";
+            this.erosionToolStripMenuItem.Click += new System.EventHandler(this.erosionToolStripMenuItem_Click);
+            // 
+            // openingToolStripMenuItem
+            // 
+            this.openingToolStripMenuItem.Name = "openingToolStripMenuItem";
+            this.openingToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.openingToolStripMenuItem.Text = "Opening";
+            this.openingToolStripMenuItem.Click += new System.EventHandler(this.openingToolStripMenuItem_Click);
+            // 
+            // closingToolStripMenuItem
+            // 
+            this.closingToolStripMenuItem.Name = "closingToolStripMenuItem";
+            this.closingToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.closingToolStripMenuItem.Text = "Closing";
+            this.closingToolStripMenuItem.Click += new System.EventHandler(this.closingToolStripMenuItem_Click);
+            // 
+            // gradientToolStripMenuItem
+            // 
+            this.gradientToolStripMenuItem.Name = "gradientToolStripMenuItem";
+            this.gradientToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.gradientToolStripMenuItem.Text = "Gradient";
+            this.gradientToolStripMenuItem.Click += new System.EventHandler(this.gradientToolStripMenuItem_Click);
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(0, 706);
@@ -239,35 +309,28 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // normalizeBrightnessToolStripMenuItem
+            // geometricToolStripMenuItem
             // 
-            this.normalizeBrightnessToolStripMenuItem.Name = "normalizeBrightnessToolStripMenuItem";
-            this.normalizeBrightnessToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.normalizeBrightnessToolStripMenuItem.Text = "Normalize brightness";
-            this.normalizeBrightnessToolStripMenuItem.Click += new System.EventHandler(this.normalizeBrightnessToolStripMenuItem_Click);
+            this.geometricToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wavesToolStripMenuItem,
+            this.waves2ToolStripMenuItem});
+            this.geometricToolStripMenuItem.Name = "geometricToolStripMenuItem";
+            this.geometricToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.geometricToolStripMenuItem.Text = "Geometric";
             // 
-            // morphologyToolStripMenuItem
+            // wavesToolStripMenuItem
             // 
-            this.morphologyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dilationToolStripMenuItem,
-            this.erosionToolStripMenuItem});
-            this.morphologyToolStripMenuItem.Name = "morphologyToolStripMenuItem";
-            this.morphologyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.morphologyToolStripMenuItem.Text = "Morphology";
+            this.wavesToolStripMenuItem.Name = "wavesToolStripMenuItem";
+            this.wavesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wavesToolStripMenuItem.Text = "Waves1";
+            this.wavesToolStripMenuItem.Click += new System.EventHandler(this.wavesToolStripMenuItem_Click);
             // 
-            // dilationToolStripMenuItem
+            // waves2ToolStripMenuItem
             // 
-            this.dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
-            this.dilationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dilationToolStripMenuItem.Text = "Dilation";
-            this.dilationToolStripMenuItem.Click += new System.EventHandler(this.dilationToolStripMenuItem_Click);
-            // 
-            // erosionToolStripMenuItem
-            // 
-            this.erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
-            this.erosionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.erosionToolStripMenuItem.Text = "Erosion";
-            this.erosionToolStripMenuItem.Click += new System.EventHandler(this.erosionToolStripMenuItem_Click);
+            this.waves2ToolStripMenuItem.Name = "waves2ToolStripMenuItem";
+            this.waves2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.waves2ToolStripMenuItem.Text = "Waves2";
+            this.waves2ToolStripMenuItem.Click += new System.EventHandler(this.waves2ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -318,6 +381,13 @@
         private System.Windows.Forms.ToolStripMenuItem morphologyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dilationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem erosionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem geometricToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wavesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem waves2ToolStripMenuItem;
     }
 }
 

@@ -53,7 +53,7 @@ namespace CV_lab_1
             return min;
         }
 
-        public static int m_x = 10;
-        public static int m_y = 10;
+        public static int m_x = 3;
+        public static int m_y = 3;
     }
 }

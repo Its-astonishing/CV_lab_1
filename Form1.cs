@@ -178,5 +178,41 @@ namespace CV_lab_1
             IFilter filter = new Erosion();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void openingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Opening();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void closingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Closing();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void gradientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Gradient();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void medianFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new MedianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void wavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Waves1();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void waves2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFilter filter = new Waves2();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
