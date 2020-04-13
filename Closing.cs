@@ -17,7 +17,7 @@ namespace CV_lab_1
             Dilation dilation = new Dilation();
 
             resultImage = dilation.processImage(sourceImage, worker);
-            resultImage = erosion.processImage(sourceImage, worker);
+            resultImage = erosion.processImage(resultImage, worker);
 
             return resultImage;
         }
